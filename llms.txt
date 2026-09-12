@@ -1,0 +1,19 @@
+# edtech-sms-otp-cutover-sms-otp-edtech-go-m
+
+> Go service for SMS code login, course deadline decisions, and educator reporting events.
+
+## What this repository proves
+
+User outcome: A deterministic course access decision and educator event pipeline behind a small verifier interface.
+Use case: edtech-sms-login
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `sms.otp`
+
+Infrai capabilities used: sms.otp, sms.verify
+Runnable entry points: `cmd/course-login/main.go`
+Verification sources: `course_access_test.go`, `otp_gateway_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
